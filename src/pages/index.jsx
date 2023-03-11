@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <>
       <Head>
+        <title>Weebstore - Right place for otaku's</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-
 
       <main>
         <h1 className="text-4xl text-blue-600">Hello worlds</h1>
@@ -18,8 +18,10 @@ export default function Home() {
 }
 
 
-Home.getLayout = (page) => {
-  <MainLayout>
-    {page}
-  </MainLayout>
+Home.getLayout = function(page) {
+  return (
+    <MainLayout>
+      {page}
+    </MainLayout>
+  )
 }

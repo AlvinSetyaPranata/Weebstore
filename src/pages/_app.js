@@ -1,10 +1,8 @@
 import '@/index.css'
 
 export default function App({ Component, pageProps }) {
-  const getLayout = Component.getLayout ?? ((page) => page)
+  const getLayout = Component.getLayout || ((page) => page)
 
   // return <Component {...pageProps} />
-  return (
-    <>{getLayout(<Component {...pageProps} />)}</>
-  )
+  return getLayout(<Component {...pageProps} />)
 }
